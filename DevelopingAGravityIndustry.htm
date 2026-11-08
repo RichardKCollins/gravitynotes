@@ -1,0 +1,189 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Developing a Gravity Industry</title>
+</head>
+<script>
+	
+	var G = .667408;  //  (pm/s2)*m2/kg
+//=============================================================
+//       Calc_1
+//=============================================================
+function Calc_1(M,R,A)
+{
+	A.value = (G*M.value)/(R.value*R.value);
+}
+//=============================================================
+//       OnLoad
+//=============================================================
+function OnLoad()
+{
+	Calc_1(M1,R1,A1);
+	Calc_1(M2,R2,A2);
+	Calc_1(M3,R3,A3);
+}
+</script>
+
+<body onload="OnLoad();">
+<p align="center"><b>Developing a Gravity Industry</b></p>
+<p align="center">Richard Collins, draft 26 Dec 2017</p>
+</p>
+<p align="left">I was going to start with &quot;gravity equals acceleration, the 
+second time derivative of position&quot;.&nbsp; But any real signal (&quot;time series&quot;) 
+has first, second and higher derivatives.&nbsp; The second derivative events are 
+properly what we measure with accelerometers, and the third derivative events 
+are what we measure with LIGO.&nbsp; That is a rough way to slice things.&nbsp; 
+Properly, maybe we should be using Taylor series consistently, and look at the 
+full details of every signal.&nbsp; For practical purposes, for fast computing 
+and ease of use, it is often sufficient to take first, second and higher 
+<u>differences</u> of uniformly sampled real signals, and look at the statistical and time series 
+properties of each.&nbsp; We have many sparse networks measuring bits of the 
+gravitational field.&nbsp; I am trying, here, to document them and show how they 
+can be treated as a single gravity industry.&nbsp; I am also going to document 
+the efforts to generate second and higher derivative signals and use them for 
+practical purposes like manipulation, communication and imaging.</p>
+<p align="left">The measurement of gravity/acceleration pervades our society now.&nbsp; New 
+technologies allow us to use it much like we have used electromagnetism in the 
+past.&nbsp; So all the things you have done with electromagnetism, think how 
+that might be done with gravity.&nbsp; The signals from gravity sources are not 
+much damped or interfered with. You can image with gravity signals.&nbsp; You can 
+signal and communicate with gravity signals.&nbsp; You can move things with 
+gravity signals.</p>
+<p align="left">From the GW170817 kilonova event, the speed of gravity is the 
+same as electromagnetic waves.&nbsp; The elastogravity experiments show that 
+local measurement of the speed of gravity is possible.&nbsp; I hope the 
+elastogravity community will improve their instruments, and add speed of light 
+calculations to their routine monitoring.&nbsp; It will help set a standard for 
+quality and accuracy.</p>
+<p align="left">Accelerometers measure acceleration in units of nanometers per 
+second squared, listed as nm/s2 or nm/s^2.&nbsp; Accelerations associated with 
+acoustic waves in air are measured with microphones.&nbsp; Accelerations 
+associated with sounds transmitted through the earth are measured with 
+seismometers or geophones.&nbsp; Accelerations associated with waves travelling 
+at the speed of light are measured with gravimeters.&nbsp; Since &quot;gravimetry&quot; is 
+ambiguous, &quot;accelerometry&quot; might be preferred.&nbsp; The acceleration wave 
+travelling at the speed of light/gravity from an earthquake is sometimes called 
+an &quot;elastogravity wave&quot;, to indicate it is generated from an elastic event in 
+the earth and travels at the speed of gravity.&nbsp; Elastogravity measurement 
+are the first experiments on earth showing the speed of light and gravity are 
+likely the same.&nbsp; We just need accelerometers that can be correlated at 
+high frequencies (GHz and THz and higher) to be able to use these signals for 
+imaging, tracking, and measurement of the earth, oceans and atmosphere.&nbsp; 
+The photon, atom and electron interferometer-based accelerometers should be 
+sensitive and adroit enough to essentially replicate the full repertoire of 
+electromagnetic techniques at all frequencies.</p>
+<p align="left">&quot;Newtonian noise&quot; is the name given, by the gravitational wave 
+community, to the earth-based signals measured by accelerometers, and 
+gravitational wave subsystems.&nbsp; It is considered by them to be a nuisance.&nbsp; 
+But for earth-based gravity/acceleration imaging, that is where all the 
+information is kept.&nbsp; Seismic waves, ocean waves, winds and rain in the 
+atmosphere generate &quot;Newtonian noise&quot; or, preferably, &quot;acceleration signals&quot; or 
+&quot;acceleration waves&quot;.</p>
+<p align="left">Both electromagnetism and acceleration waves travel at the speed 
+of light/gravity.&nbsp; They are both waves in the fabric of space.&nbsp; It is 
+simply sufficient to say they travel at the speed of light/gravity, and say 
+which properties are transported.&nbsp; Some common transported properties are 
+energy, or momentum, or angular momentum, or linear momentum, or tension, or 
+force, or a very specifically shaped quantum state.&nbsp; Energy per unit mass 
+is called potential.&nbsp; Momentum per unit mass is called velocity.&nbsp; 
+Force per unit mass is called acceleration.&nbsp; The third time derivative of 
+position with respect to time is called &quot;jerk&quot;.&nbsp; The gravitational wave 
+experiments are tracking third derivative events.&nbsp; One could also say they 
+are looking for longitudinal waves in the potential itself.&nbsp; That is much 
+nicer than saying they are measuring jerk events.</p>
+<p align="left">The gradient of a potential is acceleration. Measurement 
+networks on earth, and in space, routinely have to correct for velocity and 
+potential that changes the rate of chemical, atomic and nuclear processes.&nbsp; 
+(I am looking into the effect of the sun moon potential changes on nuclear 
+fission and fusion reactors.)</p>
+<p align="left">The &quot;sun moon&quot; signal is the largest, stable, reference gravity 
+signal on earth.&nbsp; It is a vector acceleration at any location and time.&nbsp; 
+If it is measured by an instrument attached to the earth, then one must subtract 
+the acceleration of the sun and moon on the earth, since we are presently not 
+able to distinguish the direct signals from the sun and moon.&nbsp; When we get 
+accelerometers that can detect and record at microwave, infrared and optical 
+frequencies, we should be able to see the unique signatures in the signals from 
+these two direct sources.&nbsp; For now, we take baby steps and use the low 
+frequency tools that are available.</p>
+<blockquote>
+	<p align="left"><a href="Files/HsinchuSample.xlsx">Sample Excel File of 
+Regression</a> - example of calibrating a superconducting gravimeter station 
+with the sun moon signal.</p>
+</blockquote>
+<p align="left">The sun moon signal varies roughly +/- 1500 nm/s2.&nbsp; The 
+elastogravity signals range +/- 1 nm/s2.&nbsp; The earth tide signals are +/- 20 
+nm/s2.&nbsp; Movements in the atmosphere are in the +/- 5 nm/s2 range.&nbsp; 
+Polar motions 1 nm/s2.&nbsp;&nbsp;</p>
+<p align="left">A 
+<input type="text" id="M1" size="9" value=100 style="background-color:lightgreen;text-align:center" onchange="Calc_1(M1,R1,A1);"> kg man at 
+<input type="text" id="R1" size="9" value=3 style="background-color:lightgreen;text-align:center" onchange="Calc_1(M1,R1,A1);"> meters is Gm/r^2 = 
+<input type="text" id="A1" size="24" value=0 style="background-color:lightblue;text-align:center">&nbsp; pm/s2 (picometers per second squared).
+</p>
+<p align="left">A 
+<input type="text" id="M2" size="9" value=100000 style="background-color:lightgreen;text-align:center" onchange="Calc_1(M2,R2,A2);"> kg ocean wave at 
+<input type="text" id="R2" size="9" value=30 style="background-color:lightgreen;text-align:center" onchange="Calc_1(M2,R2,A2);"> meters is 
+<input type="text" id="A2" size="24" value=0 style="background-color:lightblue;text-align:center" name="T3">&nbsp; pm/s2
+</p>
+<p align="left">A 
+<input type="text" id="M3" size="9" value=333400 style="background-color:lightgreen;text-align:center" onchange="Calc_1(M3,R3,A3);"> kg 747-100 at 
+<input type="text" id="R3" size="9" value=50 style="background-color:lightgreen;text-align:center" onchange="Calc_1(M3,R3,A3);"> meters is  
+<input type="text" id="A3" size="24" value=0 style="background-color:lightblue;text-align:center" name="A3">&nbsp; pm/s2</p>
+<p align="left">An earthquake of moment magnitude
+<input type="text" id="MM4" size="9" value=6.7 style="background-color:lightgreen;text-align:center" onchange="Calc_4();"> at
+a distance of
+<input type="text" id="RadialDistance4" size="9" value=100 style="background-color:lightgreen;text-align:center" onchange="Calc_4();"> km, of shear modulus 
+<input type="text" id="ShearModulus4" size="9" value=50000 style="background-color:lightgreen;text-align:center" onchange="Calc_4();"> MPa, and density 
+<input type="text" id="Density4" size="9" value=2700 style="background-color:lightgreen;text-align:center" onchange="Calc_4();"> kg/m3. If the average slip is  
+<input type="text" id="SlipDepth4" size="9" value=0.5 style="background-color:lightgreen;text-align:center" onchange="Calc_4();"> meters, and the volume of the slip is
+<input type="text" id="Volume4" size="9" value=0.5 style="background-color:lightgreen;text-align:center" onchange="Calc_4();"> m3,
+<input type="text" id="D4" size="24" value=0 style="background-color:lightblue;text-align:center" name="A3">&nbsp; pm/s2</p>
+
+<p align="left">The sensitivity and sampling rate of an instrument determines 
+what can be seen by the instrument.&nbsp; I am not an expert of all the types of 
+instruments in use now.&nbsp; I do think that there needs to be a better 
+reporting of sampling rate, bits per sample, energy per unit range, statistical 
+summaries of real signals, and much much better sharing of signals.&nbsp; It is 
+too expensive for everyone to build LIGOs, ring lasers, gravimeters, VLBI 
+networks, precise GPS stations, nuclear reactors and such - all of which are 
+affected by gravity.&nbsp; But it cost little to share signals on the Internet.</p>
+<hr>
+<p align="left"><a href="https://en.wikipedia.org/wiki/Taylor_series">Taylor 
+Series</a>, Accelerometer, </p>
+<hr>
+<p align="left">The study of acceleration waves is also the study of 
+transmission of acceleration at the speed of light.&nbsp; When we learn to do 
+this well, we can go back and reexamine how our electric and magnetic fields are 
+just ways of expressing the transmission of forces at the speed of 
+light/gravity.&nbsp; </p><hr>
+<p align="left">The energy density of 
+the gravitational field is very high.&nbsp; When we can routinely synthesize 
+acceleration fields, either equilibrium or dynamic ones, we will also have 
+effective control of gravity.</p><hr>
+<p align="left">The signals from a seismometer are usually reports in velocity 
+units.&nbsp; The signal is proportional to the instantaneous velocity of the 
+mass.&nbsp; We take one time derivative to get a signal that will correlate with 
+the true acceleration.&nbsp; In an atom interferometer and many other 
+experiments the signal is proportional to a distance, so we take the second time 
+derivative to get a signal that will correlate with the true acceleration.&nbsp; 
+This is how you use the sun moon signal for calibration.&nbsp; What I have found 
+is that it is not necessary to convert instrument voltages and currents to 
+position measurements.&nbsp; It is only necessary to take the first and higher 
+derivatives, correlate with the sun and moon signal, then you have a workable 
+calibration without having to worry about the detailed steps.&nbsp; If you have 
+the leisure to work out the fundamentals, great.&nbsp; But otherwise you can get 
+something that works and tackle harder problems like imaging or manipulation.</p>
+<hr>
+<p align="left">If you use a tiny accelerometer to measure the motions of a 
+small magnet, then randomly generate magnetic fields with an array, you can 
+correlate the motions of the magnet with signals generated, and converge to a 
+control signal to move the magnet at will.&nbsp; Yes, it is a lot of data, and 
+you have to collect data within the time frame of the motion of the mass, and 
+the signal generating time, and the propagating and response times, but it can 
+eventually be made routine.&nbsp; We can start with the base solution, calibrate 
+locally, then move things at will.&nbsp; If it produces an acceleration, it is 
+gravity.&nbsp; Keep it simple.</p>
+
+</body>
+
+</html>
